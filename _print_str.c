@@ -1,20 +1,24 @@
 #include "main.h"
+
 /**
  * _print_str - prints a given string of charectors
  * @str: pointer to the string to print
  *
  * Return: number of charectors printed
  */
-
 int _print_str(char *str)
 {
-	int i;
+	int i = 0;
+	char *s = "(null)";
 
-	i = 0;
 	if (str)
 	{
-		while (str[i])
-			_putchar(str[i++]);
+		for (; str[i] != '\0'; i++)
+			_putchar(str[i]);
+		return (i);
 	}
-	return (i);
+	else
+		for (; s[i] != '\0'; i++)
+			_putchar(s[i]);
+	return (-1);
 }
